@@ -7,11 +7,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name="CONTACT")
+@Table(name="contact")
 public class Contact {
 	
 	@Id
@@ -25,17 +24,18 @@ public class Contact {
 	private String image;
 	@Column(length = 5000)
 	private String description;
-	
 	@ManyToOne	
 	@JsonIgnore
 	private User user;
-	
+
 	public int getcId() {
 		return cId;
 	}
+
 	public void setcId(int cId) {
 		this.cId = cId;
 	}
+
 	public String getName() {
 		return name;
 	}
@@ -84,21 +84,10 @@ public class Contact {
 	public void setUser(User user) {
 		this.user = user;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		// TODO Auto-generated method stub
 		return this.cId==((Contact)obj).getcId();
 	}
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
 }

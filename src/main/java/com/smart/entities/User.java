@@ -16,7 +16,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name="USER")
+@Table(name="user")
 public class User {
 
 	@Id
@@ -121,12 +121,4 @@ public class User {
 				+ ", enabled=" + enabled + ", imageUrl=" + imageUrl + ", about=" + about + ", contacts=" + contacts
 				+ "]";
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 }
